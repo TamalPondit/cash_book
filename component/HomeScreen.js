@@ -1,12 +1,17 @@
 // In App.js in a new project
 
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { Button, View, Text } from 'react-native';
+ 
 
-function HomeScreen() {
+function HomeScreen({ navigation }) {
   return (
     <View>
-      <Text style={{ padding:10, fontSize:20}}>Cash Book Home page</Text>
+      <Text style={{ padding:10, fontSize:20 }}>Cash Book Home page</Text>
+      <Button
+        title="Go to Details"
+        onPress={() => navigation.navigate('BookScreen')}
+      />
     </View>
   );
 }
